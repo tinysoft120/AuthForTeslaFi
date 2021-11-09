@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  AuthForTeslaFi
 //
-//  Created by Wovles on 11/9/21.
+//  Created by John on 11/9/21.
 //
 
 import UIKit
