@@ -38,10 +38,15 @@ class HomeViewController: UIViewController {
     //}
     
     @IBAction func actionLinkToTeslaFi(_ sender: Any) {
-        let link = "https://www.teslafi.com/index.php?refresh_token=\(self.refreshToken)"
-        if let url = URL(string: link) {
-            UIApplication.shared.open(url)
-        }
+        //let link = "https://www.teslafi.com/index.php?refresh_token=\(self.refreshToken)"
+        //if let url = URL(string: link) {
+        //    UIApplication.shared.open(url)
+        //}
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "idWebViewController") as! WebViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc._refreshToken = refreshToken
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func updateToken() {

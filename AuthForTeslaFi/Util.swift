@@ -41,3 +41,4 @@ extension KeychainWrapper {
 extension UserDefaults {
     public static let standard = UserDefaults.standard  // UserDefaults.init(suiteName: "group.global")!
 }
+

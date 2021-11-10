@@ -284,7 +284,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nj-fa-O1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="84"/>
+            <point key="canvasLocation" x="703" y="84"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="1j3-LH-dfY">
+            <objects>
+                <viewController storyboardIdentifier="idWebViewController" id="QPd-Ur-KWn" customClass="WebViewController" customModule="AuthForTeslaFi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tXB-kp-HtF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEW-4o-mvX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n4A-g1-gg4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SEW-4o-mvX" firstAttribute="top" secondItem="tXB-kp-HtF" secondAttribute="top" id="DUU-fe-jIX"/>
+                            <constraint firstItem="SEW-4o-mvX" firstAttribute="leading" secondItem="n4A-g1-gg4" secondAttribute="leading" id="X1n-Av-ecF"/>
+                            <constraint firstItem="n4A-g1-gg4" firstAttribute="trailing" secondItem="SEW-4o-mvX" secondAttribute="trailing" id="eK4-o4-Q72"/>
+                            <constraint firstAttribute="bottom" secondItem="SEW-4o-mvX" secondAttribute="bottom" id="qVn-2T-fRC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webViewContainer" destination="SEW-4o-mvX" id="3pB-df-0nG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zL-Ep-k4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="84"/>
         </scene>
     </scenes>
     <resources>
