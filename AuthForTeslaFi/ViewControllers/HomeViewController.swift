@@ -11,7 +11,6 @@ import MBProgressHUD
 class HomeViewController: UIViewController {
     @IBOutlet weak var lblVersion: UILabel!
     @IBOutlet weak var lblRefreshToken: UILabel!
-    @IBOutlet weak var vRefreshTokenView: UIView!
     
     private lazy var model: AuthViewModel = AuthViewModel()
     
@@ -24,31 +23,25 @@ class HomeViewController: UIViewController {
         
         lblVersion.text = "Ver. \(version) build \(build)"
         updateToken()
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(actionCopyToken(_:)))
-        vRefreshTokenView.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc private func actionCopyToken(_ sender: UITapGestureRecognizer) {
-        
+    @IBAction func actionCopyToken(_ sender: Any) {
         let pasteBoard = UIPasteboard.general
         pasteBoard.string = refreshToken
         animateCheck()
     }
     
-    @IBAction func actionRefreshToken(_ sender: Any) {
-        model.refreshAll {
-            self.updateToken()
-        }
-    }
-    
-    @IBAction func actionSendEmail(_ sender: Any) {
-    }
-    
-    @IBAction func actionSendSMS(_ sender: Any) {
-    }
+    //@IBAction func actionRefreshToken(_ sender: Any) {
+    //    model.refreshAll {
+    //        self.updateToken()
+    //    }
+    //}
     
     @IBAction func actionLinkToTeslaFi(_ sender: Any) {
+        let link = "https://www.teslafi.com/index.php?refresh_token=\(self.refreshToken)"
+        if let url = URL(string: link) {
+            UIApplication.shared.open(url)
+        }
     }
     
     private func updateToken() {

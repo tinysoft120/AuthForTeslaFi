@@ -12,13 +12,9 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var ivLogo: UIImageView!
-    @IBOutlet weak var lblVersion: UILabel!
     
     private lazy var model: AuthViewModel = AuthViewModel()
     private var region: TokenRegion = .global
-    
-    private let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
-    private let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +23,6 @@ class LoginViewController: UIViewController {
         ivLogo.layer.shadowOpacity = 0.2
         ivLogo.layer.shadowOffset = CGSize.zero
         ivLogo.layer.shadowRadius = 6
-        lblVersion.text = "Ver. \(version) build \(build)"
     }
     
     @IBAction func actionSegmentedControlChanged(_ sender: Any) {
@@ -114,7 +109,7 @@ class LoginViewController: UIViewController {
                         model.setJwtToken(token)
                         
                         if let encodedToken = try? JSONEncoder().encode(token) {
-                            logRequestEvent(message: "Setting V3 token from setJwtToken: \(encodedToken)")
+                            print("V3 token from setJwtToken: \(encodedToken)")
                             KeychainWrapper.global.set(encodedToken, forKey: kTokenV3, withAccessibility: .afterFirstUnlock)
                         }
                         

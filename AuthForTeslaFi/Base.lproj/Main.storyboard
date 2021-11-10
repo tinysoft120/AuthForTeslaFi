@@ -18,11 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPatternSVG" translatesAutoresizingMaskIntoConstraints="NO" id="cif-2c-e6m">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" name="IconPatternAccentColor"/>
-                                <color key="tintColor" name="IconPatternAccentColor"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeslaFiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="TJr-Fd-Lox">
                                 <rect key="frame" x="102" y="84" width="210" height="112"/>
                                 <constraints>
@@ -30,48 +25,28 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="uyu-HE-m5D"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auth for TeslaFi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xb-bf-gjh">
-                                <rect key="frame" x="81.5" y="236" width="251" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ver. 1.0.1 Build 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8N-qQ-nbT">
-                                <rect key="frame" x="158" y="288" width="98.5" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GR9-Iu-2go">
-                                <rect key="frame" x="0.0" y="288" width="414" height="574"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5h-jB-zZd" userLabel="Space1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to TeslaFi to generate Tokens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="4Aq-52-9qP">
-                                        <rect key="frame" x="25" y="97" width="364" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link your Tesla.com account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="4Aq-52-9qP">
+                                        <rect key="frame" x="55.5" y="95" width="303" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to generate tokens, you have to login with your Tesla account." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-lg-WWo">
-                                        <rect key="frame" x="25" y="133" width="364" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpU-P6-6fO" userLabel="Space2">
+                                        <rect key="frame" x="0.0" y="125" width="414" height="76.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drd-On-iJi" userLabel="SignView">
-                                        <rect key="frame" x="35" y="189" width="344" height="201"/>
+                                        <rect key="frame" x="35" y="201.5" width="344" height="154"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose login region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7S-48-UI9">
-                                                <rect key="frame" x="77" y="20" width="190" height="27"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PQk-yv-rGH">
-                                                <rect key="frame" x="0.0" y="67" width="344" height="43"/>
+                                                <rect key="frame" x="0.0" y="20" width="344" height="43"/>
                                                 <color key="backgroundColor" name="backgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="CG6-5z-1Eq"/>
@@ -85,14 +60,14 @@
                                                 </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-8e-uAF">
-                                                <rect key="frame" x="0.0" y="134" width="344" height="52"/>
+                                                <rect key="frame" x="0.0" y="87" width="344" height="52"/>
                                                 <color key="backgroundColor" name="TeslaRed"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="gL2-Jc-wug"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Sign in with Tesla">
+                                                <buttonConfiguration key="configuration" style="plain" title="Authenticate With Tesla">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
@@ -107,50 +82,57 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="L7S-48-UI9" firstAttribute="top" secondItem="Drd-On-iJi" secondAttribute="top" constant="20" id="1gk-O6-9WI"/>
                                             <constraint firstAttribute="trailing" secondItem="ubA-8e-uAF" secondAttribute="trailing" id="Aoz-zN-T5o"/>
-                                            <constraint firstItem="PQk-yv-rGH" firstAttribute="top" secondItem="L7S-48-UI9" secondAttribute="bottom" constant="20" id="GGS-xS-q9b"/>
                                             <constraint firstAttribute="trailing" secondItem="PQk-yv-rGH" secondAttribute="trailing" id="JmL-Bh-tcC"/>
-                                            <constraint firstItem="L7S-48-UI9" firstAttribute="centerX" secondItem="Drd-On-iJi" secondAttribute="centerX" id="Pdy-px-Rwj"/>
                                             <constraint firstAttribute="bottom" secondItem="ubA-8e-uAF" secondAttribute="bottom" constant="15" id="Ssx-bx-L8p"/>
+                                            <constraint firstItem="PQk-yv-rGH" firstAttribute="top" secondItem="Drd-On-iJi" secondAttribute="top" constant="20" id="YvI-NO-ReV"/>
                                             <constraint firstItem="ubA-8e-uAF" firstAttribute="leading" secondItem="Drd-On-iJi" secondAttribute="leading" id="bnE-u3-qfs"/>
                                             <constraint firstItem="ubA-8e-uAF" firstAttribute="top" secondItem="PQk-yv-rGH" secondAttribute="bottom" constant="25" id="d8w-IZ-T7j"/>
                                             <constraint firstItem="PQk-yv-rGH" firstAttribute="leading" secondItem="Drd-On-iJi" secondAttribute="leading" id="sen-do-xzZ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-9x-lEc" userLabel="Space2">
-                                        <rect key="frame" x="0.0" y="477" width="414" height="97"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gU-x8-0lq" userLabel="Space3">
+                                        <rect key="frame" x="0.0" y="355.5" width="414" height="76"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le9-vX-02o">
-                                        <rect key="frame" x="35" y="410" width="340.5" height="67"/>
-                                        <string key="text">You will be presented with a web browser where you can enter your Tesla credentials into the Tesla website. If you have MFA configured you will be asked to enter a valid MFA code.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-9x-lEc" userLabel="Space4">
+                                        <rect key="frame" x="0.0" y="547" width="414" height="119"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le9-vX-02o">
+                                        <rect key="frame" x="35" y="439.5" width="331" height="107.5"/>
+                                        <string key="text">TeslaFi obtains the data from your vehicle from the Tesla API. In order to connect to the API this application connects you directly to Tesla's website to authenticate and create an API token which TeslaFi will use to request data instead of your credentials.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Le9-vX-02o" firstAttribute="top" secondItem="Drd-On-iJi" secondAttribute="bottom" constant="20" id="33d-eP-wsF"/>
-                                    <constraint firstAttribute="trailing" secondItem="bgH-lg-WWo" secondAttribute="trailing" constant="25" id="3ta-2H-ldM"/>
+                                    <constraint firstItem="Le9-vX-02o" firstAttribute="top" secondItem="7gU-x8-0lq" secondAttribute="bottom" constant="8" id="33d-eP-wsF"/>
                                     <constraint firstItem="4Aq-52-9qP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GR9-Iu-2go" secondAttribute="leading" priority="999" constant="25" id="6H4-7Y-1IN"/>
                                     <constraint firstItem="ZKW-9x-lEc" firstAttribute="top" secondItem="Le9-vX-02o" secondAttribute="bottom" id="9rc-5a-tWf"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Le9-vX-02o" secondAttribute="trailing" constant="35" id="BBE-SE-Ibc"/>
-                                    <constraint firstItem="Drd-On-iJi" firstAttribute="top" secondItem="bgH-lg-WWo" secondAttribute="bottom" constant="20" id="GZJ-gA-eWO"/>
-                                    <constraint firstItem="bgH-lg-WWo" firstAttribute="top" secondItem="4Aq-52-9qP" secondAttribute="bottom" constant="6" id="IbL-2L-YXX"/>
+                                    <constraint firstItem="tpU-P6-6fO" firstAttribute="leading" secondItem="GR9-Iu-2go" secondAttribute="leading" id="DfX-5x-mn0"/>
+                                    <constraint firstAttribute="trailing" secondItem="7gU-x8-0lq" secondAttribute="trailing" id="HII-Vn-Iu2"/>
                                     <constraint firstAttribute="trailing" secondItem="Drd-On-iJi" secondAttribute="trailing" constant="35" id="LMY-uW-1Ad"/>
                                     <constraint firstAttribute="trailing" secondItem="k5h-jB-zZd" secondAttribute="trailing" id="NxQ-Sc-XLb"/>
                                     <constraint firstItem="k5h-jB-zZd" firstAttribute="top" secondItem="GR9-Iu-2go" secondAttribute="top" id="O1s-xJ-ZBc"/>
-                                    <constraint firstItem="bgH-lg-WWo" firstAttribute="leading" secondItem="GR9-Iu-2go" secondAttribute="leading" constant="25" id="SMY-X9-cgs"/>
+                                    <constraint firstItem="tpU-P6-6fO" firstAttribute="top" secondItem="4Aq-52-9qP" secondAttribute="bottom" id="TkV-qO-Yrz"/>
                                     <constraint firstItem="Le9-vX-02o" firstAttribute="leading" secondItem="GR9-Iu-2go" secondAttribute="leading" constant="35" id="XVy-Oo-DBE"/>
+                                    <constraint firstItem="Drd-On-iJi" firstAttribute="top" secondItem="tpU-P6-6fO" secondAttribute="bottom" id="cz5-7H-hag"/>
                                     <constraint firstItem="k5h-jB-zZd" firstAttribute="leading" secondItem="GR9-Iu-2go" secondAttribute="leading" id="dmH-ju-S52"/>
+                                    <constraint firstAttribute="trailing" secondItem="tpU-P6-6fO" secondAttribute="trailing" id="eOA-yo-Hml"/>
+                                    <constraint firstItem="7gU-x8-0lq" firstAttribute="height" secondItem="k5h-jB-zZd" secondAttribute="height" multiplier="0.8" id="fqF-4X-zV8"/>
                                     <constraint firstItem="Drd-On-iJi" firstAttribute="leading" secondItem="GR9-Iu-2go" secondAttribute="leading" constant="35" id="g5y-sB-OBc"/>
                                     <constraint firstItem="ZKW-9x-lEc" firstAttribute="leading" secondItem="GR9-Iu-2go" secondAttribute="leading" id="gU5-Be-11Q"/>
                                     <constraint firstAttribute="bottom" secondItem="ZKW-9x-lEc" secondAttribute="bottom" id="hfR-ye-Pwq"/>
                                     <constraint firstAttribute="trailing" secondItem="ZKW-9x-lEc" secondAttribute="trailing" id="iGA-FD-QT9"/>
-                                    <constraint firstItem="k5h-jB-zZd" firstAttribute="height" secondItem="ZKW-9x-lEc" secondAttribute="height" id="kGH-7b-jx7"/>
+                                    <constraint firstItem="k5h-jB-zZd" firstAttribute="height" secondItem="ZKW-9x-lEc" secondAttribute="height" multiplier="0.8" id="kGH-7b-jx7"/>
+                                    <constraint firstItem="7gU-x8-0lq" firstAttribute="top" secondItem="Drd-On-iJi" secondAttribute="bottom" id="pNM-o5-z0Y"/>
                                     <constraint firstItem="4Aq-52-9qP" firstAttribute="top" secondItem="k5h-jB-zZd" secondAttribute="bottom" id="rfP-de-mZu"/>
+                                    <constraint firstItem="7gU-x8-0lq" firstAttribute="leading" secondItem="GR9-Iu-2go" secondAttribute="leading" id="tJc-bE-HZp"/>
+                                    <constraint firstItem="tpU-P6-6fO" firstAttribute="height" secondItem="k5h-jB-zZd" secondAttribute="height" multiplier="0.8" id="z3n-oe-IRD"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Aq-52-9qP" secondAttribute="trailing" constant="25" id="zCi-rX-nhn"/>
                                     <constraint firstItem="4Aq-52-9qP" firstAttribute="centerX" secondItem="GR9-Iu-2go" secondAttribute="centerX" id="zdV-L9-VEA"/>
                                 </constraints>
@@ -160,25 +142,16 @@
                         <color key="backgroundColor" name="IconPatternBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TJr-Fd-Lox" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BJq-9N-NoK"/>
-                            <constraint firstItem="cif-2c-e6m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CHJ-YK-hgM"/>
-                            <constraint firstItem="3xb-bf-gjh" firstAttribute="top" secondItem="TJr-Fd-Lox" secondAttribute="bottom" constant="40" id="Dy6-ap-tU3"/>
-                            <constraint firstItem="GR9-Iu-2go" firstAttribute="top" secondItem="3xb-bf-gjh" secondAttribute="bottom" constant="10" id="Nq7-XS-gOb"/>
+                            <constraint firstItem="GR9-Iu-2go" firstAttribute="top" secondItem="TJr-Fd-Lox" secondAttribute="bottom" id="Els-RO-fTr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GR9-Iu-2go" secondAttribute="trailing" id="Q1l-9H-KDd"/>
-                            <constraint firstItem="cif-2c-e6m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RXj-DD-YT7"/>
-                            <constraint firstItem="3xb-bf-gjh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQV-Zb-tIo"/>
                             <constraint firstItem="TJr-Fd-Lox" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="TV7-s3-FxF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cif-2c-e6m" secondAttribute="trailing" id="WMm-d1-0ae"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GR9-Iu-2go" secondAttribute="bottom" id="ZLu-Pp-eeh"/>
                             <constraint firstItem="TJr-Fd-Lox" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" priority="999" id="cDq-Pu-ETo"/>
-                            <constraint firstAttribute="bottom" secondItem="cif-2c-e6m" secondAttribute="bottom" id="ml5-oO-NyG"/>
                             <constraint firstItem="GR9-Iu-2go" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qUr-Yg-SeE"/>
-                            <constraint firstItem="u8N-qQ-nbT" firstAttribute="top" secondItem="3xb-bf-gjh" secondAttribute="bottom" constant="10" id="uC6-wB-oc2"/>
-                            <constraint firstItem="u8N-qQ-nbT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zUd-tG-Lhq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ivLogo" destination="TJr-Fd-Lox" id="Ak5-Ju-xsh"/>
-                        <outlet property="lblVersion" destination="u8N-qQ-nbT" id="IPb-qE-1k9"/>
                         <outlet property="segmentedControl" destination="PQk-yv-rGH" id="hnd-5z-eac"/>
                     </connections>
                 </viewController>
@@ -194,118 +167,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBU-cD-gww">
-                                <rect key="frame" x="113" y="78" width="188.5" height="28"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Auth for ">
-                                        <attributes>
-                                            <color key="NSColor" name="NavigationTitleColor"/>
-                                            <font key="NSFont" size="25" name="Arial-BoldMT"/>
-                                            <font key="NSOriginalFont" size="25" name="Arial-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Tesla">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="25" name="Arial-BoldMT"/>
-                                            <font key="NSOriginalFont" size="25" name="Arial-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Fi">
-                                        <attributes>
-                                            <color key="NSColor" name="NavigationTitleColor"/>
-                                            <font key="NSFont" size="25" name="Arial-BoldMT"/>
-                                            <font key="NSOriginalFont" size="25" name="Arial-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh Token" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBU-cD-gww">
+                                <rect key="frame" x="134" y="78" width="146" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" name="NavigationTitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ver 1.0.1 Build (build_num)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMb-eh-ejR">
-                                <rect key="frame" x="116.5" y="118" width="181.5" height="18"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ver 1.0.1 Build (build_num)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMb-eh-ejR">
+                                <rect key="frame" x="116.5" y="116.5" width="181.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iZ-gn-hrM" userLabel="Refresh Token View">
-                                <rect key="frame" x="16" y="168" width="382" height="166.5"/>
+                                <rect key="frame" x="16" y="166.5" width="382" height="174"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="id_title" text="Refresh Token" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9v-p1-2HC">
-                                        <rect key="frame" x="130" y="0.0" width="122.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="id_description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="oxr-Hu-gn5">
-                                        <rect key="frame" x="0.0" y="33.5" width="382" height="72"/>
-                                        <string key="text">A refresh token allows for continuous interaction with your Tesla Account and is usually what is requested by other apps and third-party services. This is used to generate new access tokens.</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="id_description" text="Please choose an option below to provide TeslaFi with your Tesla API Refresh Token." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="oxr-Hu-gn5">
+                                        <rect key="frame" x="30" y="0.0" width="289.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="id_token" text="(Token)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-LH-YFR">
-                                        <rect key="frame" x="0.0" y="115.5" width="382" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" restorationIdentifier="id_token" text="(token)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-LH-YFR">
+                                        <rect key="frame" x="8" y="84" width="366" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" name="TeslaRed"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="ic_tap_copy" text="Tap to copy to clipboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpj-Sj-0ow">
-                                        <rect key="frame" x="108.5" y="143.5" width="165.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="oxr-Hu-gn5" secondAttribute="trailing" id="0E9-qL-lzS"/>
-                                    <constraint firstItem="oxr-Hu-gn5" firstAttribute="top" secondItem="i9v-p1-2HC" secondAttribute="bottom" constant="12" id="5p9-om-ViK"/>
-                                    <constraint firstAttribute="bottom" secondItem="jpj-Sj-0ow" secondAttribute="bottom" constant="5" id="Ggl-Bh-AP3"/>
-                                    <constraint firstItem="jpj-Sj-0ow" firstAttribute="centerX" secondItem="9iZ-gn-hrM" secondAttribute="centerX" id="J6F-9D-Ehw"/>
-                                    <constraint firstItem="QMt-LH-YFR" firstAttribute="top" secondItem="oxr-Hu-gn5" secondAttribute="bottom" constant="10" id="PYS-ya-4DV"/>
-                                    <constraint firstItem="jpj-Sj-0ow" firstAttribute="top" secondItem="QMt-LH-YFR" secondAttribute="bottom" constant="10" id="RSq-G8-QoC"/>
-                                    <constraint firstItem="oxr-Hu-gn5" firstAttribute="leading" secondItem="9iZ-gn-hrM" secondAttribute="leading" id="nKy-2L-F3T"/>
-                                    <constraint firstItem="QMt-LH-YFR" firstAttribute="leading" secondItem="9iZ-gn-hrM" secondAttribute="leading" id="oSf-Du-6en"/>
-                                    <constraint firstItem="i9v-p1-2HC" firstAttribute="top" secondItem="9iZ-gn-hrM" secondAttribute="top" id="t1d-M7-UJQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="QMt-LH-YFR" secondAttribute="trailing" id="xNm-ck-srG"/>
-                                    <constraint firstItem="i9v-p1-2HC" firstAttribute="centerX" secondItem="9iZ-gn-hrM" secondAttribute="centerX" id="xu9-Ly-0Dg"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oxr-Hu-gn5" secondAttribute="trailing" constant="30" id="0E9-qL-lzS"/>
+                                    <constraint firstItem="QMt-LH-YFR" firstAttribute="top" secondItem="oxr-Hu-gn5" secondAttribute="bottom" constant="48" id="PYS-ya-4DV"/>
+                                    <constraint firstAttribute="bottom" secondItem="QMt-LH-YFR" secondAttribute="bottom" constant="72" id="Xvd-g5-9pu"/>
+                                    <constraint firstItem="oxr-Hu-gn5" firstAttribute="leading" secondItem="9iZ-gn-hrM" secondAttribute="leading" constant="30" id="nKy-2L-F3T"/>
+                                    <constraint firstItem="QMt-LH-YFR" firstAttribute="leading" secondItem="9iZ-gn-hrM" secondAttribute="leading" constant="8" id="oSf-Du-6en"/>
+                                    <constraint firstItem="oxr-Hu-gn5" firstAttribute="top" secondItem="9iZ-gn-hrM" secondAttribute="top" id="tD1-N4-gFk"/>
+                                    <constraint firstAttribute="trailing" secondItem="QMt-LH-YFR" secondAttribute="trailing" constant="8" id="xNm-ck-srG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-Tz-zhM" userLabel="Button Container">
-                                <rect key="frame" x="35" y="358.5" width="344" height="244"/>
+                                <rect key="frame" x="35" y="433" width="344" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw5-rg-Ld7">
-                                        <rect key="frame" x="0.0" y="0.0" width="344" height="48"/>
-                                        <color key="backgroundColor" name="TeslaRed"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="1jj-8w-1Na"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Refresh Token">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="actionRefreshToken:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="jAn-sk-kcs"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-EQ-bzL">
                                         <rect key="frame" x="0.0" y="62" width="344" height="48"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="MxK-cr-QhU"/>
+                                            <constraint firstAttribute="height" constant="48" id="Nsm-Ol-0FF"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Send Email">
+                                        <buttonConfiguration key="configuration" style="plain" title="Copy Refresh Token">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -314,38 +226,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="actionSendEmail:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="vyL-UO-TD2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz1-M7-RvK">
-                                        <rect key="frame" x="0.0" y="124" width="344" height="48"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="tJs-jt-FuD"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Send SMS">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="actionSendSMS:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="jqy-L6-xUY"/>
+                                            <action selector="actionCopyToken:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="Gas-St-Dvg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cc-uo-y7T">
-                                        <rect key="frame" x="0.0" y="186" width="344" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="48"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="eKa-2U-Lq3"/>
+                                            <constraint firstAttribute="height" constant="48" id="DLl-lz-tsL"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Link To TeslaFi">
+                                        <buttonConfiguration key="configuration" style="plain" title="Link Existing TeslaFi Account">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -354,25 +246,19 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="actionLinkToTeslaFi:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="rFq-TD-dWz"/>
+                                            <action selector="actionLinkToTeslaFi:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="0nQ-4h-up3"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="9cc-uo-y7T" secondAttribute="trailing" id="2oS-Cj-D7Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="vz1-M7-RvK" secondAttribute="trailing" id="5Mg-mj-DKh"/>
-                                    <constraint firstItem="9cc-uo-y7T" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="Iio-mN-oHc"/>
-                                    <constraint firstItem="vz1-M7-RvK" firstAttribute="top" secondItem="tAQ-EQ-bzL" secondAttribute="bottom" constant="14" id="LAe-ou-dQH"/>
-                                    <constraint firstItem="9cc-uo-y7T" firstAttribute="top" secondItem="vz1-M7-RvK" secondAttribute="bottom" constant="14" id="MmD-BQ-cia"/>
-                                    <constraint firstItem="tAQ-EQ-bzL" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="Onn-95-7BD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lw5-rg-Ld7" secondAttribute="trailing" id="YvO-dL-uK3"/>
-                                    <constraint firstAttribute="bottom" secondItem="9cc-uo-y7T" secondAttribute="bottom" constant="10" id="ZpO-Gl-oKg"/>
-                                    <constraint firstItem="tAQ-EQ-bzL" firstAttribute="top" secondItem="Lw5-rg-Ld7" secondAttribute="bottom" constant="14" id="gFH-pR-Ml4"/>
-                                    <constraint firstItem="Lw5-rg-Ld7" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="gvz-r5-6Xl"/>
-                                    <constraint firstItem="vz1-M7-RvK" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="nRl-ip-fhI"/>
-                                    <constraint firstItem="Lw5-rg-Ld7" firstAttribute="top" secondItem="MMc-Tz-zhM" secondAttribute="top" id="pG8-7x-Vxm"/>
-                                    <constraint firstAttribute="trailing" secondItem="tAQ-EQ-bzL" secondAttribute="trailing" id="vOk-eV-Vhg"/>
+                                    <constraint firstAttribute="trailing" secondItem="9cc-uo-y7T" secondAttribute="trailing" id="67v-mI-yp7"/>
+                                    <constraint firstAttribute="bottom" secondItem="tAQ-EQ-bzL" secondAttribute="bottom" constant="10" id="Sgn-Fn-XeG"/>
+                                    <constraint firstItem="tAQ-EQ-bzL" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="UXC-Ic-MdZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tAQ-EQ-bzL" secondAttribute="trailing" id="Uyg-Ka-Ixf"/>
+                                    <constraint firstItem="tAQ-EQ-bzL" firstAttribute="top" secondItem="9cc-uo-y7T" secondAttribute="bottom" constant="14" id="dh0-jM-6fn"/>
+                                    <constraint firstItem="9cc-uo-y7T" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="qaN-5o-THk"/>
+                                    <constraint firstItem="9cc-uo-y7T" firstAttribute="top" secondItem="MMc-Tz-zhM" secondAttribute="top" id="wRH-Wd-XOo"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -381,11 +267,11 @@
                         <constraints>
                             <constraint firstItem="BBU-cD-gww" firstAttribute="centerX" secondItem="RP9-LG-RLa" secondAttribute="centerX" id="4EN-jY-31H"/>
                             <constraint firstItem="gMb-eh-ejR" firstAttribute="top" secondItem="BBU-cD-gww" secondAttribute="bottom" constant="12" id="5bI-eB-hzL"/>
+                            <constraint firstItem="MMc-Tz-zhM" firstAttribute="centerY" secondItem="RP9-LG-RLa" secondAttribute="centerY" multiplier="1.1" priority="999" id="AxH-Nw-Yyx"/>
                             <constraint firstItem="gMb-eh-ejR" firstAttribute="centerX" secondItem="RP9-LG-RLa" secondAttribute="centerX" id="GwW-kG-2YN"/>
                             <constraint firstItem="v4L-81-Lju" firstAttribute="trailing" secondItem="9iZ-gn-hrM" secondAttribute="trailing" constant="16" id="IZO-Vg-AWN"/>
                             <constraint firstItem="v4L-81-Lju" firstAttribute="trailing" secondItem="MMc-Tz-zhM" secondAttribute="trailing" constant="35" id="OGk-5W-geR"/>
                             <constraint firstItem="MMc-Tz-zhM" firstAttribute="leading" secondItem="v4L-81-Lju" secondAttribute="leading" constant="35" id="Q6f-CG-61a"/>
-                            <constraint firstItem="MMc-Tz-zhM" firstAttribute="top" secondItem="9iZ-gn-hrM" secondAttribute="bottom" constant="24" id="W0h-ve-nFq"/>
                             <constraint firstItem="BBU-cD-gww" firstAttribute="top" secondItem="v4L-81-Lju" secondAttribute="top" constant="34" id="ebV-cn-baD"/>
                             <constraint firstItem="9iZ-gn-hrM" firstAttribute="leading" secondItem="v4L-81-Lju" secondAttribute="leading" constant="16" id="uob-59-WBO"/>
                             <constraint firstItem="9iZ-gn-hrM" firstAttribute="top" secondItem="BBU-cD-gww" secondAttribute="bottom" constant="62" id="wBS-57-09F"/>
@@ -394,7 +280,6 @@
                     <connections>
                         <outlet property="lblRefreshToken" destination="QMt-LH-YFR" id="XIl-c4-kSf"/>
                         <outlet property="lblVersion" destination="gMb-eh-ejR" id="Ot4-5a-U4C"/>
-                        <outlet property="vRefreshTokenView" destination="9iZ-gn-hrM" id="MUs-AQ-Qas"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nj-fa-O1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -403,14 +288,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IconPatternSVG" width="375" height="812"/>
         <image name="TeslaFiLogo" width="1055" height="546"/>
-        <namedColor name="AccentColor">
-            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="IconPatternAccentColor">
-            <color red="0.87099999189376831" green="0.87099999189376831" blue="0.87099999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="IconPatternBackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

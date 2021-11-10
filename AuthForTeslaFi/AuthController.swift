@@ -42,7 +42,7 @@ class AuthController {
     func setJwtToken(_ token: Token)
     {
         if let encodedToken = try? JSONEncoder().encode(token) {
-            logRequestEvent(message: "Setting V3 token from setJwtToken: \(encodedToken)")
+            print("Setting V3 token from setJwtToken: \(encodedToken)")
             KeychainWrapper.global.set(encodedToken, forKey: kTokenV3, withAccessibility: .afterFirstUnlock)
         }
     }
@@ -82,14 +82,14 @@ class AuthController {
                 oauthRenew(token.refresh_token, token.region ?? .global) { (refreshedToken) in
                     if let refreshedToken = refreshedToken, let encodedToken = try? JSONEncoder().encode(refreshedToken)
                     {
-                        logRequestEvent(message: "Setting V3 token from acquireTokenV3Silent: \(encodedToken)")
+                        print("Setting V3 token from acquireTokenV3Silent: \(encodedToken)")
                         KeychainWrapper.global.set(encodedToken, forKey: kTokenV3, withAccessibility: .afterFirstUnlock)
-//                        self.tokenV3 = refreshedToken
+                        //self.tokenV3 = refreshedToken
                     }
                     else
                     {
                         //self.logOut()
-                        logRequestEvent(message: "Acquire v3 token silent error: Unable to refresh token")
+                        print("Acquire v3 token silent error: Unable to refresh token")
                         completion(nil)
                         return
                     }
@@ -100,8 +100,8 @@ class AuthController {
             completion(token)
             return
         }
-        logRequestEvent(message: "Acquire v3 token silent error: Token not found")
-//        self.logOut()
+        print("Acquire v3 token silent error: Token not found")
+        //self.logOut()
         completion(nil)
     }
 
@@ -141,37 +141,37 @@ class AuthController {
 
                         token = Token(access_token: access_token, token_type: token_type, expires_in: expiresIn, refresh_token: refresh_token, expires_at: expiresAt, region: region)
                         if let encodedToken = try? JSONEncoder().encode(token) {
-                            logRequestEvent(message: "Setting V3 token from oauthRenew: \(encodedToken)")
+                            print("Setting V3 token from oauthRenew: \(encodedToken)")
                             KeychainWrapper.global.set(encodedToken, forKey: kTokenV3, withAccessibility: .afterFirstUnlock)
-//                            self.tokenV3 = token
+                            //self.tokenV3 = token
                         }
                         if (refreshToken != refresh_token)
                         {
-                            logRequestEvent(message: "Refresh token v3: Refresh token value updated during refresh")
+                            print("Refresh token v3: Refresh token value updated during refresh")
                         }
                     }
-                    logRequestEvent(message: "Refresh token v3 success: \(token == nil ? "Token received but was invalid" : "True")")
+                    print("Refresh token v3 success: \(token == nil ? "Token received but was invalid" : "True")")
                     completion(token)
                     return
                 case .failure(let error):
                     // print("Error refreshing token: \(error)")
                     if let stringData = String(data: error.data, encoding: .utf8) {
-                        logRequestEvent(message: "Error response body: \(stringData)")
+                        print("Error response body: \(stringData)")
                     }
 
                     if error.statusCode == 400
                     {
                         if retries < 3
                         {
-                            logRequestEvent(message: "Refresh token v3 failure 400: retrying \(retries + 1)")
+                            print("Refresh token v3 failure 400: retrying \(retries + 1)")
                             self.oauthRenew(refreshToken, region, retries: retries + 1, completion)
                             return
                         }
-                        logRequestEvent(message: "Refresh token v3 failure 400: giving up")
-                        logRequestEvent(message: "Refresh token v3 error 400, removing token")
-                        logRequestEvent(message: "Removing V3 token from oauthRenew")
+                        print("Refresh token v3 failure 400: giving up")
+                        print("Refresh token v3 error 400, removing token")
+                        print("Removing V3 token from oauthRenew")
                         KeychainWrapper.global.removeObject(forKey: kTokenV3, withAccessibility: .afterFirstUnlock)
-//                        self.tokenV3 = nil
+                        //self.tokenV3 = nil
                         //KeychainWrapper.global.set("", forKey: kWatchToken, withAccessibility: .afterFirstUnlock)
                         //UserDefaults.standard.set(nil, forKey: kWatchToken)
                     }
@@ -179,42 +179,42 @@ class AuthController {
                     {
                         if retries < 3
                         {
-                            logRequestEvent(message: "Refresh token v3 failure 401: retrying \(retries + 1)")
+                            print("Refresh token v3 failure 401: retrying \(retries + 1)")
                             self.oauthRenew(refreshToken, region, retries: retries + 1, completion)
                             return
                         }
-                        logRequestEvent(message: "Refresh token v3 failure 401: giving up")
-                        logRequestEvent(message: "Refresh token v3 error 401, removing token")
-                        logRequestEvent(message: "Removing V3 token from oauthRenew")
+                        print("Refresh token v3 failure 401: giving up")
+                        print("Refresh token v3 error 401, removing token")
+                        print("Removing V3 token from oauthRenew")
                         KeychainWrapper.global.removeObject(forKey: kTokenV3, withAccessibility: .afterFirstUnlock)
-//                        self.tokenV3 = nil
+                        //self.tokenV3 = nil
                     }
                     else if error.statusCode == 848
                     {
                         //Mystical SSL error
-                        logRequestEvent(message: "Refresh token v3 failure: SSL 848")
+                        print("Refresh token v3 failure: SSL 848")
                         if retries < 3
                         {
-                            logRequestEvent(message: "Refresh token v3 failure: retrying \(retries + 1)")
+                            print("Refresh token v3 failure: retrying \(retries + 1)")
                             self.oauthRenew(refreshToken, region, retries: retries + 1, completion)
                             return
                         }
-                        logRequestEvent(message: "Refresh token v3 failure: giving up")
+                        print("Refresh token v3 failure: giving up")
                     }
                     else
                     {
                         //19 - network connection was lost
                         //23 - request timed out
 
-                        logRequestEvent(message: "Refresh token v3 error: \(error.headers["Www-Authenticate"] as? String ?? error.statusCode.description)")
+                        print("Refresh token v3 error: \(error.headers["Www-Authenticate"] as? String ?? error.statusCode.description)")
                         if retries < 3
                         {
-                            logRequestEvent(message: "Refresh token v3 failure \(error.statusCode.description): retrying \(retries + 1)")
+                            print("Refresh token v3 failure \(error.statusCode.description): retrying \(retries + 1)")
                             self.oauthRenew(refreshToken, region, retries: retries + 1, completion)
                             return
                         }
-                        logRequestEvent(message: "Refresh token v3 failure: giving up")
-                        logRequestEvent(message: "Refresh token v3 failure: \(error.error.debugDescription)")
+                        print("Refresh token v3 failure: giving up")
+                        print("Refresh token v3 failure: \(error.error.debugDescription)")
                         //set offline - not logged out
                         
                     }
@@ -242,58 +242,58 @@ class AuthController {
                 token?.region = region
                 if let encodedToken = try? JSONEncoder().encode(token) {
                     KeychainWrapper.global.set(encodedToken, forKey: kTokenV2, withAccessibility: .afterFirstUnlock)
-//                    self.tokenV2 = token
+                    //self.tokenV2 = token
                 }
                 else
                 {
-                    logRequestEvent(message: "Unable to encode token! Data: \(String(decoding: result.data, as: UTF8.self))")
+                    print("Unable to encode token! Data: \(String(decoding: result.data, as: UTF8.self))")
                 }
-                logRequestEvent(message: "Refresh token V4 success: \(token == nil ? "Token received but was invalid" : "True")")
+                print("Refresh token V4 success: \(token == nil ? "Token received but was invalid" : "True")")
                 completion(token)
                 return
             case .failure(let error):
                 // print("Error refreshing token: \(error)")
                 if let stringData = String(data: error.data, encoding: .utf8) {
-                    logRequestEvent(message: "Error response body: \(stringData)")
+                    print("Error response body: \(stringData)")
                 }
 
                 if error.statusCode == 400
                 {
                     if retries < 3
                     {
-                        logRequestEvent(message: "Refresh token v4 failure 400: retrying \(retries + 1)")
+                        print("Refresh token v4 failure 400: retrying \(retries + 1)")
                         self.refreshClassicTokenWithJWTToken(accessToken, region, retries: retries + 1, completion)
                         return
                     }
-                    logRequestEvent(message: "Refresh token v4 failure 400: giving up")
-                    logRequestEvent(message: "Refresh token V4 error 400, removing token")
+                    print("Refresh token v4 failure 400: giving up")
+                    print("Refresh token V4 error 400, removing token")
                     KeychainWrapper.global.removeObject(forKey: kTokenV2, withAccessibility: .afterFirstUnlock)
-//                    self.tokenV2 = nil
+                    //self.tokenV2 = nil
                 }
                 else if error.statusCode == 401
                 {
                     if retries < 3
                     {
-                        logRequestEvent(message: "Refresh token v4 failure 401: retrying \(retries + 1)")
+                        print("Refresh token v4 failure 401: retrying \(retries + 1)")
                         self.refreshClassicTokenWithJWTToken(accessToken, region, retries: retries + 1, completion)
                         return
                     }
-                    logRequestEvent(message: "Refresh token v4 failure 401: giving up")
-                    logRequestEvent(message: "Refresh token V4 error 401, removing token")
+                    print("Refresh token v4 failure 401: giving up")
+                    print("Refresh token V4 error 401, removing token")
                     KeychainWrapper.global.removeObject(forKey: kTokenV2, withAccessibility: .afterFirstUnlock)
-//                    self.tokenV2 = nil
+                    //self.tokenV2 = nil
                 }
                 else if error.statusCode == 848
                 {
                     //Mystical SSL error
-                    logRequestEvent(message: "Refresh token v4 failure: SSL 848")
+                    print("Refresh token v4 failure: SSL 848")
                     if retries < 3
                     {
-                        logRequestEvent(message: "Refresh token v4 failure: retrying \(retries + 1)")
+                        print("Refresh token v4 failure: retrying \(retries + 1)")
                         self.refreshClassicTokenWithJWTToken(accessToken, region, retries: retries + 1, completion)
                         return
                     }
-                    logRequestEvent(message: "Refresh token v4 failure: giving up")
+                    print("Refresh token v4 failure: giving up")
                     
                 }
                 else
@@ -301,15 +301,15 @@ class AuthController {
                     //19 - network connection was lost
                     //23 - request timed out
 
-                    logRequestEvent(message: "Refresh token V4 error: \(error.headers["Www-Authenticate"] as? String ?? error.statusCode.description)")
+                    print("Refresh token V4 error: \(error.headers["Www-Authenticate"] as? String ?? error.statusCode.description)")
                     if retries < 3
                     {
-                        logRequestEvent(message: "Refresh token v4 failure \(error.statusCode.description): retrying \(retries + 1)")
+                        print("Refresh token v4 failure \(error.statusCode.description): retrying \(retries + 1)")
                         self.refreshClassicTokenWithJWTToken(accessToken, region, retries: retries + 1, completion)
                         return
                     }
-                    logRequestEvent(message: "Refresh token v4 failure: giving up")
-                    logRequestEvent(message: "Refresh token v4 failure: \(error.error.debugDescription)")
+                    print("Refresh token v4 failure: giving up")
+                    print("Refresh token v4 failure: \(error.error.debugDescription)")
                 }
                 completion(nil)
             }
@@ -330,16 +330,16 @@ class AuthController {
             if (forceRefresh || (!token.refresh_token.starts(with: "ey") && token.expires_at ?? Date() <= Date().addingTimeInterval(60*60*24*7)) || (token.refresh_token.starts(with: "ey") && token.expires_at ?? Date() <= Date().addingTimeInterval(60))) //Token expired - 7 days before expiry, refresh the token
             {
                 //So to simplify - literally remove v2 token key, retry this method which will fall down to v3 and either work or fail
-                logRequestEvent(message: "Removing expired v2 token")
+                print("Removing expired v2 token")
                 KeychainWrapper.global.removeObject(forKey: kTokenV2, withAccessibility: .afterFirstUnlock)
-//                self.tokenV2 = nil
-                logRequestEvent(message: "V2 token expired, retrying v3")
+                //self.tokenV2 = nil
+                print("V2 token expired, retrying v3")
                 self.acquireTokenSilent(completion)
                 return
             }
             //Return validated token
             //print(token)
-//            self.tokenV2 = token
+            //self.tokenV2 = token
             completion(token)
             return
         }
@@ -355,21 +355,19 @@ class AuthController {
                         }
                         else
                         {
-                            //self.logOut()
-                            logRequestEvent(message: "Acquire token silent error: Unable to refresh token using refreshClassicTokenWithJWTToken")
-//                            self.tokenV2 = nil
+                            print("Acquire token silent error: Unable to refresh token using refreshClassicTokenWithJWTToken")
                             completion(nil)
                             return
                         }
-//                        self.tokenV2 = refreshedToken
+                        //self.tokenV2 = refreshedToken
                         completion(refreshedToken)
                         return
                     }
                 }
                 else
                 {
-                    logRequestEvent(message: "Acquire token silent error: Unable to acquire v3 token")
-//                    self.tokenV2 = nil
+                    print("Acquire token silent error: Unable to acquire v3 token")
+                    //self.tokenV2 = nil
                     completion(nil)
                     return
                 }
@@ -377,9 +375,7 @@ class AuthController {
             //IMPORTANT!!! Need to return here, to not fall-through to below! Above method will ensure completion is eventually called!
             return
         }
-        logRequestEvent(message: "Acquire token silent error: Token not found")
-//        self.logOut()
-//        self.tokenV2 = nil
+        print("Acquire token silent error: Token not found")
         completion(nil)
     }
     
