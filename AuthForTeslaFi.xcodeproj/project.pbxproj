@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6286F4FA273B6005008F01FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629AB66D273A29D3000D2067 /* Assets.xcassets */; };
 		629AB665273A29D1000D2067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB664273A29D1000D2067 /* AppDelegate.swift */; };
 		629AB667273A29D1000D2067 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB666273A29D1000D2067 /* SceneDelegate.swift */; };
 		629AB669273A29D1000D2067 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB668273A29D1000D2067 /* LoginViewController.swift */; };
 		629AB66C273A29D1000D2067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB66A273A29D1000D2067 /* Main.storyboard */; };
-		629AB66E273A29D3000D2067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629AB66D273A29D3000D2067 /* Assets.xcassets */; };
 		629AB671273A29D3000D2067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB66F273A29D3000D2067 /* LaunchScreen.storyboard */; };
 		629AB682273AC6D5000D2067 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB678273AC6D4000D2067 /* Models.swift */; };
 		629AB683273AC6D5000D2067 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67A273AC6D4000D2067 /* AuthController.swift */; };
@@ -191,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				629AB671273A29D3000D2067 /* LaunchScreen.storyboard in Resources */,
-				629AB66E273A29D3000D2067 /* Assets.xcassets in Resources */,
+				6286F4FA273B6005008F01FC /* Assets.xcassets in Resources */,
 				629AB66C273A29D1000D2067 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = AuthForTeslaFi/AuthForTeslaFi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
@@ -436,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = AuthForTeslaFi/AuthForTeslaFi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;

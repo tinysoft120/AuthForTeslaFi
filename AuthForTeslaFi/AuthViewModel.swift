@@ -21,12 +21,14 @@ class AuthViewModel {
         }
     }
     
-    public func refreshAll()
+    public func refreshAll(onChange: @escaping () -> Void )
     {
         AuthController.shared().acquireTokenV3Silent(forceRefresh: true) { (token) in
             self.tokenV3 = token
+            onChange()
             AuthController.shared().acquireTokenSilent(forceRefresh: true) { (token) in
                 self.tokenV2 = token
+                onChange()
             }
         }
     }

@@ -1,24 +1,28 @@
 PODS:
+  - MBProgressHUD (1.2.0)
   - Networking (5.1.0)
   - OAuthSwift (2.2.0)
   - SwiftDate (6.3.1)
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 1.2.0)
   - Networking (~> 5.1)
   - OAuthSwift (~> 2.2)
   - SwiftDate (~> 6.3)
 
 SPEC REPOS:
   trunk:
+    - MBProgressHUD
     - Networking
     - OAuthSwift
     - SwiftDate
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   Networking: 85b2a0c2d3b6eb548f4eec9880f5f3c49e6b0959
   OAuthSwift: 75efbb5bd9a4b2b71a37bd7e986bf3f55ddd54c6
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
 
-PODFILE CHECKSUM: b5acaec1a1cd018ea2054db35cb3240471c96e1a
+PODFILE CHECKSUM: 82c76b6c8bf3586a4277841e27662403dbf8ec74
 
 COCOAPODS: 1.11.2

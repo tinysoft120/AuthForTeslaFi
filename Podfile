@@ -10,5 +10,6 @@ target 'AuthForTeslaFi' do
   pod 'Networking', '~> 5.1'
   pod 'OAuthSwift', '~> 2.2'
   pod 'SwiftDate', '~> 6.3'
-
+  pod 'MBProgressHUD', '~> 1.2.0'
+  
 end
