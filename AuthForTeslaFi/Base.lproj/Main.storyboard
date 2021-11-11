@@ -207,28 +207,8 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-Tz-zhM" userLabel="Button Container">
-                                <rect key="frame" x="35" y="433" width="344" height="120"/>
+                                <rect key="frame" x="35" y="441.5" width="344" height="192"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-EQ-bzL">
-                                        <rect key="frame" x="0.0" y="62" width="344" height="48"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="Nsm-Ol-0FF"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Copy Refresh Token">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="actionCopyToken:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="Gas-St-Dvg"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cc-uo-y7T">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="48"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -249,14 +229,57 @@
                                             <action selector="actionLinkToTeslaFi:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="0nQ-4h-up3"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPY-ar-O8t">
+                                        <rect key="frame" x="0.0" y="67" width="344" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="tIX-4c-Wi7"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Create A New TeslaFi Account">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionSignToTeslaFi:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="AFb-be-1bg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-EQ-bzL">
+                                        <rect key="frame" x="0.0" y="134" width="344" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Nsm-Ol-0FF"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Copy Refresh Token">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionCopyToken:" destination="KDw-Pt-jDZ" eventType="touchUpInside" id="Gas-St-Dvg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9cc-uo-y7T" secondAttribute="trailing" id="67v-mI-yp7"/>
+                                    <constraint firstItem="tAQ-EQ-bzL" firstAttribute="top" secondItem="dPY-ar-O8t" secondAttribute="bottom" constant="19" id="Idx-YK-qFt"/>
+                                    <constraint firstItem="dPY-ar-O8t" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="NzG-88-I7e"/>
                                     <constraint firstAttribute="bottom" secondItem="tAQ-EQ-bzL" secondAttribute="bottom" constant="10" id="Sgn-Fn-XeG"/>
                                     <constraint firstItem="tAQ-EQ-bzL" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="UXC-Ic-MdZ"/>
                                     <constraint firstAttribute="trailing" secondItem="tAQ-EQ-bzL" secondAttribute="trailing" id="Uyg-Ka-Ixf"/>
-                                    <constraint firstItem="tAQ-EQ-bzL" firstAttribute="top" secondItem="9cc-uo-y7T" secondAttribute="bottom" constant="14" id="dh0-jM-6fn"/>
+                                    <constraint firstItem="dPY-ar-O8t" firstAttribute="top" secondItem="9cc-uo-y7T" secondAttribute="bottom" constant="19" id="dh0-jM-6fn"/>
+                                    <constraint firstAttribute="trailing" secondItem="dPY-ar-O8t" secondAttribute="trailing" id="nKe-Z0-dCI"/>
                                     <constraint firstItem="9cc-uo-y7T" firstAttribute="leading" secondItem="MMc-Tz-zhM" secondAttribute="leading" id="qaN-5o-THk"/>
                                     <constraint firstItem="9cc-uo-y7T" firstAttribute="top" secondItem="MMc-Tz-zhM" secondAttribute="top" id="wRH-Wd-XOo"/>
                                 </constraints>
@@ -267,7 +290,7 @@
                         <constraints>
                             <constraint firstItem="BBU-cD-gww" firstAttribute="centerX" secondItem="RP9-LG-RLa" secondAttribute="centerX" id="4EN-jY-31H"/>
                             <constraint firstItem="gMb-eh-ejR" firstAttribute="top" secondItem="BBU-cD-gww" secondAttribute="bottom" constant="12" id="5bI-eB-hzL"/>
-                            <constraint firstItem="MMc-Tz-zhM" firstAttribute="centerY" secondItem="RP9-LG-RLa" secondAttribute="centerY" multiplier="1.1" priority="999" id="AxH-Nw-Yyx"/>
+                            <constraint firstItem="MMc-Tz-zhM" firstAttribute="centerY" secondItem="RP9-LG-RLa" secondAttribute="centerY" multiplier="1.2" priority="999" id="AxH-Nw-Yyx"/>
                             <constraint firstItem="gMb-eh-ejR" firstAttribute="centerX" secondItem="RP9-LG-RLa" secondAttribute="centerX" id="GwW-kG-2YN"/>
                             <constraint firstItem="v4L-81-Lju" firstAttribute="trailing" secondItem="9iZ-gn-hrM" secondAttribute="trailing" constant="16" id="IZO-Vg-AWN"/>
                             <constraint firstItem="v4L-81-Lju" firstAttribute="trailing" secondItem="MMc-Tz-zhM" secondAttribute="trailing" constant="35" id="OGk-5W-geR"/>
@@ -284,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nj-fa-O1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703" y="84"/>
+            <point key="canvasLocation" x="702.89855072463774" y="83.705357142857139"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="1j3-LH-dfY">
@@ -298,12 +321,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-S0-Lp8">
+                                <rect key="frame" x="10" y="54" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="cq9-Ft-zkB"/>
+                                    <constraint firstAttribute="width" secondItem="K6L-S0-Lp8" secondAttribute="height" multiplier="1:1" id="qyk-pz-9eq"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" ">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionBack:" destination="QPd-Ur-KWn" eventType="touchUpInside" id="3HC-zC-0rm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n4A-g1-gg4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="K6L-S0-Lp8" firstAttribute="top" secondItem="n4A-g1-gg4" secondAttribute="top" constant="10" id="A2r-AW-S9L"/>
+                            <constraint firstItem="n4A-g1-gg4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K6L-S0-Lp8" secondAttribute="trailing" symbolic="YES" id="AoF-9F-r5i"/>
                             <constraint firstItem="SEW-4o-mvX" firstAttribute="top" secondItem="tXB-kp-HtF" secondAttribute="top" id="DUU-fe-jIX"/>
                             <constraint firstItem="SEW-4o-mvX" firstAttribute="leading" secondItem="n4A-g1-gg4" secondAttribute="leading" id="X1n-Av-ecF"/>
+                            <constraint firstItem="K6L-S0-Lp8" firstAttribute="leading" secondItem="n4A-g1-gg4" secondAttribute="leading" constant="10" id="ZgP-E8-mf0"/>
                             <constraint firstItem="n4A-g1-gg4" firstAttribute="trailing" secondItem="SEW-4o-mvX" secondAttribute="trailing" id="eK4-o4-Q72"/>
                             <constraint firstAttribute="bottom" secondItem="SEW-4o-mvX" secondAttribute="bottom" id="qVn-2T-fRC"/>
                         </constraints>
@@ -319,6 +360,7 @@
     </scenes>
     <resources>
         <image name="TeslaFiLogo" width="1055" height="546"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <namedColor name="IconPatternBackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

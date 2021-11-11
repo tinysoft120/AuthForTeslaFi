@@ -10,10 +10,15 @@ import WebKit
 import MBProgressHUD
 
 class WebViewController: UIViewController {
-    private let TELSAFI_URL = "https://www.teslafi.com/userlogin.php"  //"https://www.teslafi.com/postTest.php"  //
+    private let TELSAFI_LOGIN_URL = "https://www.teslafi.com/userlogin.php"
+    private let TELSAFI_SIGNUP_URL = "https://www.teslafi.com/signup.php"
     
     @IBOutlet weak var webViewContainer: UIView!
     
+    var _authType: AuthType?
+    private var authType: AuthType {
+        get { return _authType ?? .login}
+    }
     var _refreshToken: String?
     private var refreshToken: String {
         get { return _refreshToken ?? "" }
@@ -48,9 +53,21 @@ class WebViewController: UIViewController {
         //wkWebView.layer.borderColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0).cgColor
     }
     
+    @IBAction func actionBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     private func loadWebView(_ token: String) {
         let body = "refresh_token=\(token)"
-        var request = URLRequest(url: URL(string: TELSAFI_URL)!)
+        var request: URLRequest
+        
+        switch authType {
+        case .login:
+            request = URLRequest(url: URL(string: TELSAFI_LOGIN_URL)!)
+        case.signup:
+            request = URLRequest(url: URL(string: TELSAFI_SIGNUP_URL)!)
+        }
+        
         let postData = body.data(using: .utf8)!
         let contentLength = "\(postData.count)"
         request.httpMethod = "POST"
@@ -59,6 +76,11 @@ class WebViewController: UIViewController {
         request.setValue("application/x-www-form-urlencoded charset=utf-8", forHTTPHeaderField: "Content-Type")
         //request.setValue("application/json", forHTTPHeaderField: "Accept")
         wkWebView.load(request)
+    }
+    
+    enum AuthType {
+        case login
+        case signup
     }
 }
 

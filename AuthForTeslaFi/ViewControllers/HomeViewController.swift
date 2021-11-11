@@ -46,6 +46,15 @@ class HomeViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "idWebViewController") as! WebViewController
         vc.modalPresentationStyle = .fullScreen
         vc._refreshToken = refreshToken
+        vc._authType = .login
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func actionSignToTeslaFi(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "idWebViewController") as! WebViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc._refreshToken = refreshToken
+        vc._authType = .signup
         self.present(vc, animated: true, completion: nil)
     }
     
