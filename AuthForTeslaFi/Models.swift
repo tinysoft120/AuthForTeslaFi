@@ -1,6 +1,6 @@
 //
 //  Models.swift
-//  AuthAppForTesla
+//  TeslaFi
 //
 //  Created by John on 11/9/21.
 //
@@ -20,10 +20,4 @@ struct Token: Codable {
     let refresh_token: String
     var expires_at: Date?
     var region: TokenRegion?
-}
-
-struct RequestEvent : Codable, Identifiable {
-    let id: Date
-    let when: Date
-    let message: String
 }

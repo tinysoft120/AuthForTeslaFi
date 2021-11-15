@@ -1,6 +1,6 @@
 //
 //  AuthWebViewController.swift
-//  AuthAppForTesla
+//  TeslaFi
 //
 //  Created by John on 11/9/21.
 //
@@ -55,7 +55,8 @@ extension AuthWebViewController: WKNavigationDelegate {
         print(navigationAction.request.url ?? "unknown")
         
         // here we handle internally the callback url and call method that call handleOpenURL (not app scheme used)
-        if let url = navigationAction.request.url , url.absoluteString.starts(with: "https://auth.tesla.com/void/callback")  {
+        if let url = navigationAction.request.url,
+           url.absoluteString.starts(with: "https://auth.tesla.com/void/callback")  {
             OAuthSwift.handle(url: url)
             decisionHandler(.cancel)
             

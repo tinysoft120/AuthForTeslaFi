@@ -29,45 +29,31 @@
                                 <rect key="frame" x="0.0" y="196" width="414" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5h-jB-zZd" userLabel="Space1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link your Tesla.com account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="4Aq-52-9qP">
-                                        <rect key="frame" x="55.5" y="95" width="303" height="30"/>
+                                        <rect key="frame" x="55.5" y="94" width="303" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpU-P6-6fO" userLabel="Space2">
-                                        <rect key="frame" x="0.0" y="125" width="414" height="76.5"/>
+                                        <rect key="frame" x="0.0" y="124" width="414" height="75"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drd-On-iJi" userLabel="SignView">
-                                        <rect key="frame" x="35" y="201.5" width="344" height="154"/>
+                                        <rect key="frame" x="35" y="199" width="344" height="159"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PQk-yv-rGH">
-                                                <rect key="frame" x="0.0" y="20" width="344" height="43"/>
-                                                <color key="backgroundColor" name="backgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="CG6-5z-1Eq"/>
-                                                </constraints>
-                                                <segments>
-                                                    <segment title="Global"/>
-                                                    <segment title="China"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="actionSegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pVh-ei-GbU"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-8e-uAF">
-                                                <rect key="frame" x="0.0" y="87" width="344" height="52"/>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-v1-Rzu">
+                                                <rect key="frame" x="0.0" y="20" width="344" height="52"/>
                                                 <color key="backgroundColor" name="TeslaRed"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="gL2-Jc-wug"/>
+                                                    <constraint firstAttribute="height" constant="52" id="ubT-Sh-qP1"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Authenticate With Tesla">
+                                                <buttonConfiguration key="configuration" style="plain" image="globeIcon" title="Authenticate With Tesla.com  ">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
@@ -76,31 +62,51 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="actionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9s-bq-Wzl"/>
+                                                    <action selector="actionLoginWithTesla:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RXt-4c-HDe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-8e-uAF">
+                                                <rect key="frame" x="0.0" y="92" width="344" height="52"/>
+                                                <color key="backgroundColor" name="TeslaRed"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="gL2-Jc-wug"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chinaFlag" title="Authenticate With Tesla.cn     ">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="actionLoginWithTeslaCn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXL-rR-L8T"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ubA-8e-uAF" secondAttribute="trailing" id="Aoz-zN-T5o"/>
-                                            <constraint firstAttribute="trailing" secondItem="PQk-yv-rGH" secondAttribute="trailing" id="JmL-Bh-tcC"/>
+                                            <constraint firstAttribute="trailing" secondItem="mDk-v1-Rzu" secondAttribute="trailing" id="Dq4-yF-FBE"/>
+                                            <constraint firstItem="mDk-v1-Rzu" firstAttribute="leading" secondItem="Drd-On-iJi" secondAttribute="leading" id="IFu-3y-3wN"/>
                                             <constraint firstAttribute="bottom" secondItem="ubA-8e-uAF" secondAttribute="bottom" constant="15" id="Ssx-bx-L8p"/>
-                                            <constraint firstItem="PQk-yv-rGH" firstAttribute="top" secondItem="Drd-On-iJi" secondAttribute="top" constant="20" id="YvI-NO-ReV"/>
                                             <constraint firstItem="ubA-8e-uAF" firstAttribute="leading" secondItem="Drd-On-iJi" secondAttribute="leading" id="bnE-u3-qfs"/>
-                                            <constraint firstItem="ubA-8e-uAF" firstAttribute="top" secondItem="PQk-yv-rGH" secondAttribute="bottom" constant="25" id="d8w-IZ-T7j"/>
-                                            <constraint firstItem="PQk-yv-rGH" firstAttribute="leading" secondItem="Drd-On-iJi" secondAttribute="leading" id="sen-do-xzZ"/>
+                                            <constraint firstItem="ubA-8e-uAF" firstAttribute="top" secondItem="mDk-v1-Rzu" secondAttribute="bottom" constant="20" id="d8w-IZ-T7j"/>
+                                            <constraint firstItem="mDk-v1-Rzu" firstAttribute="top" secondItem="Drd-On-iJi" secondAttribute="top" constant="20" id="uTf-P9-1kT"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gU-x8-0lq" userLabel="Space3">
-                                        <rect key="frame" x="0.0" y="355.5" width="414" height="76"/>
+                                        <rect key="frame" x="0.0" y="358" width="414" height="75"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-9x-lEc" userLabel="Space4">
-                                        <rect key="frame" x="0.0" y="547" width="414" height="119"/>
+                                        <rect key="frame" x="0.0" y="548.5" width="414" height="117.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le9-vX-02o">
-                                        <rect key="frame" x="35" y="439.5" width="331" height="107.5"/>
+                                        <rect key="frame" x="35" y="441" width="331" height="107.5"/>
                                         <string key="text">TeslaFi obtains the data from your vehicle from the Tesla API. In order to connect to the API this application connects you directly to Tesla's website to authenticate and create an API token which TeslaFi will use to request data instead of your credentials.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
@@ -152,7 +158,6 @@
                     </view>
                     <connections>
                         <outlet property="ivLogo" destination="TJr-Fd-Lox" id="Ak5-Ju-xsh"/>
-                        <outlet property="segmentedControl" destination="PQk-yv-rGH" id="hnd-5z-eac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -188,10 +193,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" restorationIdentifier="id_token" text="(token)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-LH-YFR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" restorationIdentifier="id_token" text="(token)" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-LH-YFR">
                                         <rect key="frame" x="8" y="84" width="366" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" name="TeslaRed"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -361,6 +366,8 @@
     <resources>
         <image name="TeslaFiLogo" width="1055" height="546"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chinaFlag" width="28" height="28"/>
+        <image name="globeIcon" width="28" height="28"/>
         <namedColor name="IconPatternBackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -369,9 +376,6 @@
         </namedColor>
         <namedColor name="TeslaRed">
             <color red="0.90200001001358032" green="0.090000003576278687" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="backgroundColor">
-            <color red="0.87000000476837158" green="0.87000000476837158" blue="0.87000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

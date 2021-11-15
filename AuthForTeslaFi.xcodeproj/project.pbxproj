@@ -14,12 +14,10 @@
 		629AB66C273A29D1000D2067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB66A273A29D1000D2067 /* Main.storyboard */; };
 		629AB671273A29D3000D2067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629AB66F273A29D3000D2067 /* LaunchScreen.storyboard */; };
 		629AB682273AC6D5000D2067 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB678273AC6D4000D2067 /* Models.swift */; };
-		629AB683273AC6D5000D2067 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67A273AC6D4000D2067 /* AuthController.swift */; };
+		629AB683273AC6D5000D2067 /* TeslaAuthLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67A273AC6D4000D2067 /* TeslaAuthLogic.swift */; };
 		629AB685273AC6D5000D2067 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67C273AC6D4000D2067 /* AuthWebViewController.swift */; };
-		629AB686273AC6D5000D2067 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67D273AC6D4000D2067 /* Util.swift */; };
+		629AB686273AC6D5000D2067 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67D273AC6D4000D2067 /* Extensions.swift */; };
 		629AB687273AC6D5000D2067 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67E273AC6D4000D2067 /* KeychainItemAccessibility.swift */; };
-		629AB688273AC6D5000D2067 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB67F273AC6D4000D2067 /* Consts.swift */; };
-		629AB689273AC6D5000D2067 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB680273AC6D4000D2067 /* AuthViewModel.swift */; };
 		629AB68A273AC6D5000D2067 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB681273AC6D4000D2067 /* KeychainWrapper.swift */; };
 		629AB68E273ADDFE000D2067 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629AB68D273ADDFE000D2067 /* HomeViewController.swift */; };
 		62C94EA4273C1D93000C366C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C94EA3273C1D93000C366C /* WebViewController.swift */; };
@@ -38,12 +36,10 @@
 		629AB672273A29D3000D2067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		629AB678273AC6D4000D2067 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		629AB679273AC6D4000D2067 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftKeychainWrapper.h; sourceTree = "<group>"; };
-		629AB67A273AC6D4000D2067 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		629AB67A273AC6D4000D2067 /* TeslaAuthLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeslaAuthLogic.swift; sourceTree = "<group>"; };
 		629AB67C273AC6D4000D2067 /* AuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
-		629AB67D273AC6D4000D2067 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		629AB67D273AC6D4000D2067 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		629AB67E273AC6D4000D2067 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
-		629AB67F273AC6D4000D2067 /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
-		629AB680273AC6D4000D2067 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		629AB681273AC6D4000D2067 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		629AB68C273AD82E000D2067 /* AuthForTeslaFi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuthForTeslaFi.entitlements; sourceTree = "<group>"; };
 		629AB68D273ADDFE000D2067 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +95,7 @@
 				629AB666273A29D1000D2067 /* SceneDelegate.swift */,
 				629AB66D273A29D3000D2067 /* Assets.xcassets */,
 				629AB672273A29D3000D2067 /* Info.plist */,
+				62C94EA52741FAE7000C366C /* Extensions */,
 				629AB68B273AC799000D2067 /* ViewControllers */,
 				629AB67E273AC6D4000D2067 /* KeychainItemAccessibility.swift */,
 				629AB681273AC6D4000D2067 /* KeychainWrapper.swift */,
@@ -106,11 +103,8 @@
 				629AB66A273A29D1000D2067 /* Main.storyboard */,
 				629AB66F273A29D3000D2067 /* LaunchScreen.storyboard */,
 				629AB67C273AC6D4000D2067 /* AuthWebViewController.swift */,
-				629AB67F273AC6D4000D2067 /* Consts.swift */,
 				629AB678273AC6D4000D2067 /* Models.swift */,
-				629AB680273AC6D4000D2067 /* AuthViewModel.swift */,
-				629AB67A273AC6D4000D2067 /* AuthController.swift */,
-				629AB67D273AC6D4000D2067 /* Util.swift */,
+				629AB67A273AC6D4000D2067 /* TeslaAuthLogic.swift */,
 			);
 			path = AuthForTeslaFi;
 			sourceTree = "<group>";
@@ -123,6 +117,14 @@
 				62C94EA3273C1D93000C366C /* WebViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62C94EA52741FAE7000C366C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				629AB67D273AC6D4000D2067 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CCA77D885C322EDA4FC201FF /* Frameworks */ = {
@@ -249,13 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				629AB685273AC6D5000D2067 /* AuthWebViewController.swift in Sources */,
-				629AB688273AC6D5000D2067 /* Consts.swift in Sources */,
 				629AB669273A29D1000D2067 /* LoginViewController.swift in Sources */,
 				629AB665273A29D1000D2067 /* AppDelegate.swift in Sources */,
-				629AB686273AC6D5000D2067 /* Util.swift in Sources */,
-				629AB683273AC6D5000D2067 /* AuthController.swift in Sources */,
+				629AB686273AC6D5000D2067 /* Extensions.swift in Sources */,
+				629AB683273AC6D5000D2067 /* TeslaAuthLogic.swift in Sources */,
 				629AB687273AC6D5000D2067 /* KeychainItemAccessibility.swift in Sources */,
-				629AB689273AC6D5000D2067 /* AuthViewModel.swift in Sources */,
 				62C94EA4273C1D93000C366C /* WebViewController.swift in Sources */,
 				629AB68A273AC6D5000D2067 /* KeychainWrapper.swift in Sources */,
 				629AB667273A29D1000D2067 /* SceneDelegate.swift in Sources */,
@@ -411,7 +411,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = AuthForTeslaFi/AuthForTeslaFi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5U8R4T4LS6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthForTeslaFi/Info.plist;
@@ -445,7 +445,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = AuthForTeslaFi/AuthForTeslaFi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5U8R4T4LS6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthForTeslaFi/Info.plist;

@@ -12,11 +12,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lblVersion: UILabel!
     @IBOutlet weak var lblRefreshToken: UILabel!
     
-    private lazy var model: AuthViewModel = AuthViewModel()
-    
     private let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
     private let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
-    private var refreshToken: String = ""
+    var refreshToken: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,14 +57,13 @@ class HomeViewController: UIViewController {
     }
     
     private func updateToken() {
-        guard let token = model.tokenV3?.refresh_token else {
+        guard let token = refreshToken else {
             DispatchQueue.main.async { [self] in
                 dismiss(animated: true, completion: nil)
             }
             return
         }
         lblRefreshToken.text = token
-        refreshToken = token
     }
     
     private func animateCheck() {
