@@ -65,7 +65,7 @@
                                                     <action selector="actionLoginWithTesla:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RXt-4c-HDe"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-8e-uAF">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-8e-uAF">
                                                 <rect key="frame" x="0.0" y="92" width="344" height="52"/>
                                                 <color key="backgroundColor" name="TeslaRed"/>
                                                 <constraints>
@@ -375,7 +375,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TeslaRed">
-            <color red="0.90200001001358032" green="0.090000003576278687" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.90196078431372551" green="0.086274509803921567" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
